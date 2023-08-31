@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 11</title>
+    <style>
+        body {
+            font: normal 15pt Arial;
+        }
+        input {
+            font: normal 15px Arial;
+        }
+        div#resposta {
+            margin-top: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade<br></h1> 
+    País: <input type="text" name="pais" id="pais">
+    <input type="button" value="Analisar nacionalidade" onclick="analisarNacionalidade()">
+    <div id="resposta"></div>
+    <script>
+        function analisarNacionalidade() {
+            var pais = document.getElementById('pais')
+            var resposta = document.querySelector('div#resposta')
+            var texto = String(pais.value)
+            if (texto == 'Brasil') {
+                resposta.innerHTML = `Você é <strong>Brasileiro</strong>`
+            } else {
+                resposta.innerHTML = `Você é <strong>Estrangeiro</strong>`
+            }
+        }
+       
+    </script>
+</body>
+</html>
